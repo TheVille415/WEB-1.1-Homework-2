@@ -5,11 +5,16 @@
     </head>
     <body>
         <!-- Your HTML code goes here! -->
-
-
-
-
-
-        
+        {% if operation == 'add' %}
+            <h2>You chose to {{operation}} {{first_number}} and {{second_number}}. Your Result is: {{first_number + second_number}}!</h2>
+        {% elif operation == 'subtract' %}
+            <h2>You chose to {{operation}} {{first_number}} and {{second_number}}. Your Result is: {{first_number - second_number}}!</h2>
+        {% elif operation == 'multiply' %}
+            <h2>You chose to {{operation}} {{first_number}} and {{second_number}}. Your Result is: {{first_number * second_number}}!</h2>
+        {% else %}
+            <h2>You chose to {{operation}} {{first_number}} and {{second_number}}. Your Result is: {{first_number / second_number}}!</h2>
+        {% endif %}
     </body>
 </html>
+
+
